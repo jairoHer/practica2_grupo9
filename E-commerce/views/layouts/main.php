@@ -40,12 +40,13 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-
+            ['label' => 'Mi Carretilla', 'url' => ['/carretilla/index']],
             [
               'label' => 'Productos',
               'items' => [
                  ['label' => 'Agregar Productos', 'url' => '#'],
                  ['label' => 'Eliminar Productos', 'url' => '#'],
+                 ['label' => 'Lista de Productos', 'url' => ['/productoss/index']],
                  ['label' => 'Buscar Producto', 'url' => '#'],
                ],
 
