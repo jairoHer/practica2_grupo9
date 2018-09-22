@@ -22,9 +22,8 @@ class OperacionesCategoria{
   }
   public static function Quitar_Categoria($codigo_producto){
     try{
-
-      $post=Categoria::model()->findByPk($codigo_producto); // assuming there is a post whose ID is 10
-      $post->delete();
+      $producto_row = Categoria::find()->where('codigo = :codigo', [':codigo' => $codigo_producto])->one();
+      $producto_row->delete();
       return true;
 
     } catch(Exception $e){

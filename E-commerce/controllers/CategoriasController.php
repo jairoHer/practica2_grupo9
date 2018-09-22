@@ -39,4 +39,13 @@ class CategoriasController extends \yii\web\Controller
       return $this->redirect(['index']);
     }
 
+    public function actionEliminarCategoria($codigo_categoria){
+      if(OperacionesCategoria::Quitar_Categoria($codigo_categoria)){
+            Yii::$app->session->setFlash('success', "Bien, he eliminado de manera exitosa!");
+      } else {
+          Yii::$app->getSession()->setFlash('error', "No es posible eliminar");
+      }
+      return $this->redirect(['index']);
+    }
+
 }

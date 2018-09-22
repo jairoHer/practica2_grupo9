@@ -19,6 +19,9 @@ $this->title = 'Categorias Disponibles';
           <div class="list-group-item col-lg-3 btn">
             <?php echo $Productos_disponible['nombre']; ?>
           </div>
+          <div class="list-group-item col-lg-1 btn">
+            <?php echo Html::a('Eliminar', ['/categorias/eliminar-categoria', 'codigo_categoria' => $Productos_disponible['codigo']], ['class'=>'']); ?>
+          </div>
         </div>
       </section>
       <?php } // foreach ?>
