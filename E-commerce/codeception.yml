@@ -21,7 +21,8 @@ coverage:
    #remote_config: '../codeception.yml'
    # whitelist:
    include:
-      - utilities\OperacionesCategoria.php
+       - models\*
+       - utilities\*
      # - models/*
      # - controllers/*
      # - commands/*
