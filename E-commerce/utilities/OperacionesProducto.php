@@ -56,4 +56,22 @@ class OperacionesProducto{
     }
     return $total_compras;
   }
+  public static function agregarProducto($Codigo,$Categoria,$Nombre,$Descripcion,$Precio,$Estado)
+  {
+        $model = new Producto();
+        $model->codigo = $Codigo;
+        $model->categoria = $Categoria;
+        $model->nombre = $Nombre;
+        $model->nombre = $Descripcion;
+        $model->precio = $Precio;
+        $model->estado = $Estado;
+        $model->save();
+        return true;
+  }
+
+  public static function eliminarProducto($codigo_producto){
+          $producto = Producto::find()->where('codigo = :codigo', [':codigo' => $codigo_producto])->one();
+          $producto->delete();
+          return true;
+  }
 }

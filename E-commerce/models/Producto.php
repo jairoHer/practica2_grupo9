@@ -58,8 +58,9 @@ class Producto extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    /*
     public function getCategoria0()
     {
         return $this->hasOne(Categoria::className(), ['codigo' => 'categoria']);
-    }
+    }*/
 }

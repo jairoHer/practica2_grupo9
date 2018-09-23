@@ -21,7 +21,12 @@ coverage:
    #remote_config: '../codeception.yml'
    # whitelist:
    include:
-       - models\*
+       - models\Categoria.php
+       - models\ContactForm.php
+       - models\LoginForm.php
+       - models\Producto.php
+       - models\User.php
+       - tests\unit\*
        - utilities\*
      # - models/*
      # - controllers/*

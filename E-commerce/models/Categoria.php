@@ -38,19 +38,20 @@ class Categoria extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
+    /*public function attributeLabels()
     {
         return [
             'codigo' => 'Codigo',
             'nombre' => 'Nombre',
         ];
-    }
+    }*/
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProductos()
+    /*public function getProductos()
     {
         return $this->hasMany(Producto::className(), ['categoria' => 'codigo']);
     }
+    */
 }
