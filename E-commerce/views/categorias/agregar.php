@@ -1,9 +1,10 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-$this->title = 'Busqueda';
+use yii\widgets\ActiveForm;
+$this->title = 'Agregar';
 ?>
-<h1>Buscar Categoria</h1>
+<h1>Agregar Categoria</h1>
 
 <div class="body-content">
   <div class="row">
@@ -11,9 +12,9 @@ $this->title = 'Busqueda';
       <section class="row">
         <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name') ?>
+    <?= $form->field($model, 'codigo') ?>
 
-    <?= $form->field($model, 'email') ?>
+    <?= $form->field($model, 'nombre') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
