@@ -51,7 +51,7 @@ class Producto extends \yii\db\ActiveRecord
             'nombre' => 'Nombre',
             'descripcion' => 'Descripcion',
             'precio' => 'Precio',
-            'estado' => 'Estado',
+            'estado' => 'Activo',
         ];
     }
 

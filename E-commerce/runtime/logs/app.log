@@ -1,0 +1,2461 @@
+2018-09-22 04:11:11 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:11:11 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/e-commerce/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59675'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=carretilla%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582271.762
+    'REQUEST_TIME' => 1537582271
+]
+2018-09-22 04:11:27 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(41): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductossController.php(20): app\utilities\OperacionesProducto::get_productos_disponibles()
+#9 [internal function]: app\controllers\ProductossController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productoss/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(41): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\ProductossController.php(20): app\utilities\OperacionesProducto::get_productos_disponibles()
+#7 [internal function]: app\controllers\ProductossController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productoss/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:11:27 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'productoss/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/e-commerce/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=productoss%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=productoss%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582287.271
+    'REQUEST_TIME' => 1537582287
+]
+2018-09-22 04:11:36 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:11:36 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/e-commerce/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59685'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=carretilla%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582296.605
+    'REQUEST_TIME' => 1537582296
+]
+2018-09-22 04:13:14 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:13:13 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59708'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=carretilla%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537582393.989
+    'REQUEST_TIME' => 1537582393
+]
+2018-09-22 04:14:13 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:14:10 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59711'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=carretilla%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537582451.021
+    'REQUEST_TIME' => 1537582451
+]
+2018-09-22 04:15:03 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:15:01 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/e-commerce/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59716'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=carretilla%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582501.521
+    'REQUEST_TIME' => 1537582501
+]
+2018-09-22 04:15:22 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+ in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:15:20 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59727'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=carretilla%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582520.841
+    'REQUEST_TIME' => 1537582520
+]
+2018-09-22 04:16:07 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:16:06 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59731'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=carretilla%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582566.448
+    'REQUEST_TIME' => 1537582566
+]
+2018-09-22 04:17:25 [::1][-][iqc92d21l8k2vv34sovk7fme88][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#9 [internal function]: app\controllers\CarretillaController->actionIndex()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\E-commerce\utilities\OperacionesProducto.php(48): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\E-commerce\controllers\CarretillaController.php(20): app\utilities\OperacionesProducto::get_productos_comprados()
+#7 [internal function]: app\controllers\CarretillaController->actionIndex()
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('carretilla/inde...', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+
+2018-09-22 04:17:23 [::1][-][iqc92d21l8k2vv34sovk7fme88][info][application] $_GET = [
+    'r' => 'carretilla/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'iqc92d21l8k2vv34sovk7fme88'
+    '_csrf' => '2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LBczwiZcse92QtAQF3LpXipGbxJnTL61\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=iqc92d21l8k2vv34sovk7fme88; _csrf=2a6c2e7acc45ee4fe15835ca7c009207418aa2b64b2bf541f98098eda1659c09a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LBczwiZcse92QtAQF3LpXipGbxJnTL61%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Program Files\\Java\\jdk1.8.0_161\\bin;C:\\Users\\ihpam\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ihpam\\Downloads\\javacc-6.0\\bin\\lib;C:\\Users\\ihpam\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\ihpam\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0h PHP/7.2.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/E-commerce/web/index.php'
+    'REMOTE_PORT' => '59770'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=carretilla%2Findex'
+    'REQUEST_URI' => '/e-commerce/web/index.php?r=carretilla%2Findex'
+    'SCRIPT_NAME' => '/e-commerce/web/index.php'
+    'PHP_SELF' => '/e-commerce/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537582643.974
+    'REQUEST_TIME' => 1537582643
+]
+2018-09-23 15:46:24 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "productos/index". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/index', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-09-23 15:46:24 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49531'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537710384.0682
+    'REQUEST_TIME' => 1537710384
+]
+2018-09-23 15:48:05 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "productos/index". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/index', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-09-23 15:48:05 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49542'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537710485.4583
+    'REQUEST_TIME' => 1537710485
+]
+2018-09-23 15:48:06 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "productos/index". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/index', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-09-23 15:48:06 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49549'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537710486.6041
+    'REQUEST_TIME' => 1537710486
+]
+2018-09-23 15:48:14 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\E-commerce\views\producto\index.php in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductoController))
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\ProductoController))
+#2 C:\xampp\htdocs\E-commerce\controllers\ProductoController.php(43): yii\base\Controller->render('index', Array)
+#3 [internal function]: app\controllers\ProductoController->actionIndex()
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('producto/index', Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2018-09-23 15:48:13 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'producto/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49556'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=producto%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=producto%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=productos%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537710493.0891
+    'REQUEST_TIME' => 1537710493
+]
+2018-09-23 15:49:26 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ErrorException:64] yii\base\ErrorException: Cannot use yii\helpers\Html as Html because the name is already in use in C:\xampp\htdocs\E-commerce\views\productoss\index.php:39
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-09-23 15:49:25 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productoss/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49560'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productoss%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productoss%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537710565.4252
+    'REQUEST_TIME' => 1537710565
+]
+2018-09-23 15:49:46 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: dataProvider in C:\xampp\htdocs\E-commerce\views\productoss\index.php:24
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productoss\index.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductossController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\ProductossController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductossController.php(23): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\ProductossController->actionIndex()
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productoss/inde...', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 15:49:45 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productoss/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49564'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productoss%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productoss%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537710585.0405
+    'REQUEST_TIME' => 1537710585
+]
+2018-09-23 15:57:42 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "producto/create". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('producto/create', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-09-23 15:57:42 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'producto/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49725'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=producto%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=producto%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=productos%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711062.8229
+    'REQUEST_TIME' => 1537711062
+]
+2018-09-23 15:57:44 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "producto/index". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('producto/index', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-09-23 15:57:44 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'producto/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49732'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=producto%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=producto%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=producto%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711064.4223
+    'REQUEST_TIME' => 1537711064
+]
+2018-09-23 15:57:50 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "producto/index". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('producto/index', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-09-23 15:57:50 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'producto/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49739'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=producto%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=producto%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711070.5656
+    'REQUEST_TIME' => 1537711070
+]
+2018-09-23 16:07:25 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][ParseError] ParseError: syntax error, unexpected ',' in C:\xampp\htdocs\E-commerce\views\productos\_form.php:16
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#2 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#8 [internal function]: app\controllers\ProductosController->actionCreate()
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2018-09-23 16:07:25 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49888'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711645.216
+    'REQUEST_TIME' => 1537711645
+]
+2018-09-23 16:09:12 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][ParseError] ParseError: syntax error, unexpected ',' in C:\xampp\htdocs\E-commerce\views\productos\_form.php:18
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#2 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#8 [internal function]: app\controllers\ProductosController->actionCreate()
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2018-09-23 16:09:12 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49890'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711752.6606
+    'REQUEST_TIME' => 1537711752
+]
+2018-09-23 16:10:23 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][ParseError] ParseError: syntax error, unexpected ',' in C:\xampp\htdocs\E-commerce\views\productos\_form.php:18
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#2 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#8 [internal function]: app\controllers\ProductosController->actionCreate()
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2018-09-23 16:10:23 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49919'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711823.4787
+    'REQUEST_TIME' => 1537711823
+]
+2018-09-23 16:11:11 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][Error] Error: Class 'backend\models\Categoria' not found in C:\xampp\htdocs\E-commerce\views\productos\_form.php:18
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#3 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#9 [internal function]: app\controllers\ProductosController->actionCreate()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2018-09-23 16:11:11 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49925'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711871.3239
+    'REQUEST_TIME' => 1537711871
+]
+2018-09-23 16:11:14 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][Error] Error: Class 'backend\models\Categoria' not found in C:\xampp\htdocs\E-commerce\views\productos\_form.php:18
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#3 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#9 [internal function]: app\controllers\ProductosController->actionCreate()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2018-09-23 16:11:14 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49927'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711874.3798
+    'REQUEST_TIME' => 1537711874
+]
+2018-09-23 16:12:02 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][Error] Error: Class 'models\Categoria' not found in C:\xampp\htdocs\E-commerce\views\productos\_form.php:18
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#3 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#9 [internal function]: app\controllers\ProductosController->actionCreate()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2018-09-23 16:12:02 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49934'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711922.1136
+    'REQUEST_TIME' => 1537711922
+]
+2018-09-23 16:12:03 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][Error] Error: Class 'models\Categoria' not found in C:\xampp\htdocs\E-commerce\views\productos\_form.php:18
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require()
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#3 C:\xampp\htdocs\E-commerce\views\productos\create.php(18): yii\base\View->render('_form', Array)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\ProductosController))
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(74): yii\base\Controller->render('create', Array)
+#9 [internal function]: app\controllers\ProductosController->actionCreate()
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/creat...', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2018-09-23 16:12:03 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49936'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fcreate'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537711923.3007
+    'REQUEST_TIME' => 1537711923
+]
+2018-09-23 16:21:55 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Producto::Nombre in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('Nombre')
+#1 C:\xampp\htdocs\E-commerce\views\productos\view.php(9): yii\db\BaseActiveRecord->__get('Nombre')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#6 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#7 [internal function]: app\controllers\ProductosController->actionView('3')
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2018-09-23 16:21:53 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50192'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=3'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=3'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537712513.9162
+    'REQUEST_TIME' => 1537712513
+]
+2018-09-23 16:34:48 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\xampp\htdocs\E-commerce\views\productos\index.php:31
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productos\index.php(31): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(43): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\ProductosController->actionIndex()
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 16:34:47 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50323'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713287.8369
+    'REQUEST_TIME' => 1537713287
+]
+2018-09-23 16:35:55 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'nombre' of non-object in C:\xampp\htdocs\E-commerce\views\productos\view.php:34
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productos\view.php(34): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#6 [internal function]: app\controllers\ProductosController->actionView('1')
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 16:35:54 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50339'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=productos%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713354.4113
+    'REQUEST_TIME' => 1537713354
+]
+2018-09-23 16:36:53 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\db\ActiveQuery::nombre in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productos\view.php(34): yii\base\Component->__get('nombre')
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#6 [internal function]: app\controllers\ProductosController->actionView('1')
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 16:36:52 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50343'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713412.3149
+    'REQUEST_TIME' => 1537713412
+]
+2018-09-23 16:37:58 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\db\ActiveQuery::nombre in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productos\view.php(34): yii\base\Component->__get('nombre')
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#6 [internal function]: app\controllers\ProductosController->actionView('1')
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 16:37:57 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50357'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713477.8244
+    'REQUEST_TIME' => 1537713477
+]
+2018-09-23 16:41:05 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Relation names are case sensitive. app\models\Producto has a relation named "categoria0" instead of "Categoria0". in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\ActiveRelationTrait.php:180
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\BaseActiveRecord.php(299): yii\db\ActiveQuery->findFor('Categoria0', Object(app\models\Producto))
+#1 C:\xampp\htdocs\E-commerce\views\productos\view.php(34): yii\db\BaseActiveRecord->__get('Categoria0')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#6 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#7 [internal function]: app\controllers\ProductosController->actionView('1')
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2018-09-23 16:41:04 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50364'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713664.883
+    'REQUEST_TIME' => 1537713664
+]
+2018-09-23 16:41:33 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\xampp\htdocs\E-commerce\views\productos\index.php:31
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productos\index.php(31): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(43): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\ProductosController->actionIndex()
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 16:41:32 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50380'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=productos%2Fview&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713692.6843
+    'REQUEST_TIME' => 1537713692
+]
+2018-09-23 16:44:33 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\xampp\htdocs\E-commerce\views\productos\index.php:31
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\views\productos\index.php(31): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\ProductosController))
+#5 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(43): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\ProductosController->actionIndex()
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/index', Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2018-09-23 16:44:32 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50402'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713872.5872
+    'REQUEST_TIME' => 1537713872
+]
+2018-09-23 16:44:44 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\db\ActiveQuery::nombre in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\models\Producto.php(63): yii\base\Component->__get('nombre')
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php(139): app\models\Producto->getCategoria0()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('categoria0')
+#3 C:\xampp\htdocs\E-commerce\views\productos\view.php(34): yii\db\BaseActiveRecord->__get('categoria0')
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#9 [internal function]: app\controllers\ProductosController->actionView('1')
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2018-09-23 16:44:43 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50416'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=productos%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713883.1045
+    'REQUEST_TIME' => 1537713883
+]
+2018-09-23 16:45:35 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][ParseError] ParseError: syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\E-commerce\models\Producto.php:64
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\Prod...')
+#1 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(121): spl_autoload_call('app\\models\\Prod...')
+#2 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): app\controllers\ProductosController->findModel('1')
+#3 [internal function]: app\controllers\ProductosController->actionView('1')
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#8 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2018-09-23 16:45:35 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50420'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713935.9125
+    'REQUEST_TIME' => 1537713935
+]
+2018-09-23 16:45:48 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\db\ActiveQuery::nombre in C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\xampp\htdocs\E-commerce\models\Producto.php(64): yii\base\Component->__get('nombre')
+#1 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Component.php(139): app\models\Producto->getCategoria0()
+#2 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('categoria0')
+#3 C:\xampp\htdocs\E-commerce\views\productos\view.php(34): yii\db\BaseActiveRecord->__get('categoria0')
+#4 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(336): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ProductosController))
+#7 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\ProductosController))
+#8 C:\xampp\htdocs\E-commerce\controllers\ProductosController.php(56): yii\base\Controller->render('view', Array)
+#9 [internal function]: app\controllers\ProductosController->actionView('1')
+#10 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#13 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('productos/view', Array)
+#14 C:\xampp\htdocs\E-commerce\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\E-commerce\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2018-09-23 16:45:47 [::1][-][fs4lg0l5ble0f6nkjl2vhn7tbq][info][application] $_GET = [
+    'r' => 'productos/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fs4lg0l5ble0f6nkjl2vhn7tbq'
+    '_csrf' => '2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\E-commerce\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50422'
+    'SERVER_SOFTWARE' => 'PHP 7.2.8 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=productos%2Fview&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\E-commerce\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=productos%2Fview&id=1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fs4lg0l5ble0f6nkjl2vhn7tbq; _csrf=2255af3114f0a3fa061352b90204fda034a6d8aff3efa97c6eee39aaf13fc704a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oh7WU5qikG7dPWOzSTq4bvd3xP4lhNHc%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1537713947.2811
+    'REQUEST_TIME' => 1537713947
+]
