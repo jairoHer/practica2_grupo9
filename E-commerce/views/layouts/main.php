@@ -56,8 +56,7 @@ AppAsset::register($this);
               'label' => 'Categorias',// 'url' => ['/site/contact']
               'items' => [
                  ['label' => 'Agregar Categoria', 'url' => ['/categorias/agregar']],
-                 ['label' => 'Ver Categorias', 'url' => ['/categorias/index']],
-                 ['label' => 'Buscar Categoria', 'url' => ['#']],
+                 ['label' => 'Ver Categorias', 'url' => ['/categorias/index']]
                ],
 
             ],

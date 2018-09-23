@@ -2,7 +2,7 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-$this->title = 'Busqueda';
+$this->title = 'Agregar';
 ?>
 <h1>Agregar Categoria</h1>
 
@@ -11,6 +11,9 @@ $this->title = 'Busqueda';
     <div class="collapse in">
       <section class="row">
         <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'codigo') ?>
+
     <?= $form->field($model, 'nombre') ?>
 
     <div class="form-group">

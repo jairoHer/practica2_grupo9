@@ -28,27 +28,22 @@ class CategoriasController extends \yii\web\Controller
     {
         $model = new Categoria;
         if ($model->load(Yii::$app->request->post())) {
-            if(OperacionesCategoria::Nueva_Categoria($model->nombre)){
-                Yii::$app->session->setFlash('success', "Bien, ha agregado la categoria de manera exitosa!");
+            if($model->validate()){
+                if(OperacionesCategoria::Nueva_Categoria($model->nombre, $model->codigo)){
+                    Yii::$app->session->setFlash('success', "Bien, ha agregado la categoria de manera exitosa!");
+                }
+                else{
+                    Yii::$app->getSession()->setFlash('Error', 'No es posible agregar la categoria');
+                }
             }
             else{
-                Yii::$app->getSession()->setFlash('Error', 'No es posible agregar la categoria');
+                Yii::$app->getSession()->setFlash('Error', 'No es posible agregar la categoria. Problemas de validacion del modelo');
             }
             return $this->render('agregar', ['model' => $model]);
         } else {
             // la página es mostrada inicialmente o hay algún error de validación
             return $this->render('agregar', ['model' => $model]);
         }
-    }
-
-    public function actionBuscarCategoria($codigo_producto){
-      $producto_row = Categoria::find()->where('codigo = :codigo', [':codigo' => $codigo_producto])->one();
-      if(OperacionesCategoria::Quitar_Categoria($codigo_producto)){
-            Yii::$app->session->setFlash('success', "Bien, ha comprado ".$producto_row->nombre." de manera exitosa!");
-        } else {
-            Yii::$app->getSession()->setFlash('error', 'No es posible comprar el producto: '.$producto_row->codigo." ".$producto_row->nombre."");
-        }
-      return $this->redirect(['index']);
     }
 
     public function actionEliminarCategoria($codigo_categoria){

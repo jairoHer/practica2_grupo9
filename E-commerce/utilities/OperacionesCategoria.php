@@ -7,10 +7,11 @@ use app\models\Categoria;
 use app\models\Producto;
 
 class OperacionesCategoria{
-  public static function Nueva_Categoria($nombre_categoria){
+  public static function Nueva_Categoria($nombre_categoria, $codigo){
     try{
           $categoria = new Categoria;
           $categoria->nombre = $nombre_categoria;
+          $categoria->codigo = $codigo;
           $categoria->save();
           return true;
     } catch(Exception $e){
