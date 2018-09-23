@@ -31,6 +31,22 @@ $this->title = 'Carretilla';
         </div>
       </section>
       <?php } // foreach ?>
+      <section id="Total" class="row">
+        <div class="row no-gutter">
+          <div class="list-group-item col-lg-1 btn">
+
+          </div>
+          <div class="list-group-item col-lg-3 btn">
+
+          </div>
+          <div class="list-group-item col-lg-5 ">
+            Total a pagar:
+          </div>
+          <div class="list-group-item col-lg-1 btn">
+            <?php echo $total_gastado; ?>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

@@ -48,4 +48,12 @@ class OperacionesProducto{
       $result = $command->queryAll();
       return $result;
   }
+  public static function get_total_compras(){
+    $compras_rows = Producto::find()->where('estado = 2')->all();
+    $total_compras=0;
+    foreach ($compras_rows as $compras_row) {
+      $total_compras=$total_compras+$compras_row->precio;
+    }
+    return $total_compras;
+  }
 }

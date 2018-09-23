@@ -18,9 +18,10 @@ class CarretillaController extends \yii\web\Controller
     public function actionIndex()
     {
       $Productos_comprados = OperacionesProducto::get_productos_comprados();
-
+      $total_gastado = OperacionesProducto::get_total_compras();
       return $this->render('index',[
         'Productos_comprados'=>$Productos_comprados,
+        'total_gastado'=>$total_gastado,
       ]);
     }
     public function actionQuitarCompra($codigo_producto){
