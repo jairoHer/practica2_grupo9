@@ -44,11 +44,11 @@ AppAsset::register($this);
             [
               'label' => 'Productos',
               'items' => [
-                 ['label' => 'Agregar Productos', 'url' => '#'],
-                 ['label' => 'Eliminar Productos', 'url' => '#'],
-                 ['label' => 'Lista de Productos', 'url' => ['/productoss/index']],
-                 ['label' => 'Buscar Producto', 'url' => '#'],
-               ],
+                 ['label' => 'Agregar Productos', 'url' => ['/productos/create']],
+                 //['label' => 'Eliminar Productos', 'url' => '#'],
+                 ['label' => 'Lista de Productos', 'url' => ['/productos/index']]//,
+                 //['label' => 'Buscar Producto', 'url' => '#'],
+               ]
 
             ],
 
