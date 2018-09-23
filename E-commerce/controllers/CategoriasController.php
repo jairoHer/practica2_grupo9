@@ -26,7 +26,19 @@ class CategoriasController extends \yii\web\Controller
 
     public function actionAgregar()
     {
-      return $this->render('agregar');
+        $model = new Categoria;
+        if ($model->load(Yii::$app->request->post())) {
+            if(OperacionesCategoria::Nueva_Categoria($model->nombre)){
+                Yii::$app->session->setFlash('success', "Bien, ha agregado la categoria de manera exitosa!");
+            }
+            else{
+                Yii::$app->getSession()->setFlash('Error', 'No es posible agregar la categoria');
+            }
+            return $this->render('agregar', ['model' => $model]);
+        } else {
+            // la página es mostrada inicialmente o hay algún error de validación
+            return $this->render('agregar', ['model' => $model]);
+        }
     }
 
     public function actionBuscarCategoria($codigo_producto){

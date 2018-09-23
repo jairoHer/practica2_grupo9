@@ -1,19 +1,17 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 $this->title = 'Busqueda';
 ?>
-<h1>Buscar Categoria</h1>
+<h1>Agregar Categoria</h1>
 
 <div class="body-content">
   <div class="row">
     <div class="collapse in">
       <section class="row">
         <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'name') ?>
-
-    <?= $form->field($model, 'email') ?>
+    <?= $form->field($model, 'nombre') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>

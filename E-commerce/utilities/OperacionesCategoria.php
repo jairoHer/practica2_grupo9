@@ -9,12 +9,10 @@ use app\models\Producto;
 class OperacionesCategoria{
   public static function Nueva_Categoria($nombre_categoria){
     try{
-
           $categoria = new Categoria;
           $categoria->nombre = $nombre_categoria;
           $categoria->save();
           return true;
-
     } catch(Exception $e){
 
     } // catch
@@ -25,7 +23,6 @@ class OperacionesCategoria{
       $producto_row = Categoria::find()->where('codigo = :codigo', [':codigo' => $codigo_producto])->one();
       $producto_row->delete();
       return true;
-
     } catch(Exception $e){
 
     } // catch
