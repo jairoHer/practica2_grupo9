@@ -1,6 +1,7 @@
 <?php
 namespace tests\utilities;
 use app\utilities\OperacionesCategoria;
+use app\utilities\OperacionesProducto;
 class OperacionesCategoriaTest extends \Codeception\Test\Unit
 {
   private $codigo_categoria = 3;//Arrange
@@ -15,6 +16,10 @@ class OperacionesCategoriaTest extends \Codeception\Test\Unit
   }
   public function testObtenerListaDeCategoriasDisponibles(){
     $result = OperacionesCategoria::get_categorias_disponibles();//Act
+    $this->assertNotEmpty($result);//Assert
+  }
+  public function testObtenerListaDeProductosTop(){
+    $result = OperacionesProducto::get_top();//Act
     $this->assertNotEmpty($result);//Assert
   }
 }
