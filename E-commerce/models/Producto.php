@@ -23,7 +23,7 @@ class Producto extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'producto';
+        return 'Producto';
     }
 
     /**

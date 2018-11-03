@@ -41,6 +41,15 @@ class OperacionesProducto{
       $result = $command->queryAll();
       return $result;
   }
+
+  public static function get_top(){
+      $query_string= "SELECT * from Producto where estado = 1 order by precio desc limit 5;";
+      $connection = Yii::$app->getDb();
+      $command = $connection->createCommand($query_string);
+      $result = $command->queryAll();
+      return $result;
+  }
+
   public static function get_productos_comprados(){
       $query_string= "SELECT * from Producto where estado = 2;";
       $connection = Yii::$app->getDb();

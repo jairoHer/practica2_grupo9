@@ -47,6 +47,7 @@ AppAsset::register($this);
                  ['label' => 'Agregar Productos', 'url' => '#'],
                  ['label' => 'Eliminar Productos', 'url' => '#'],
                  ['label' => 'Lista de Productos', 'url' => ['/productoss/index']],
+                 ['label' => 'Productos mas Caros', 'url' => ['/productoss/top']],
                  ['label' => 'Buscar Producto', 'url' => '#'],
                ],
 
@@ -55,8 +56,8 @@ AppAsset::register($this);
             [
               'label' => 'Categorias',// 'url' => ['/site/contact']
               'items' => [
-                 ['label' => 'Agregar Categoria', 'url' => '#'],
-                 ['label' => 'Ver Categorias', 'url' => '#'],
+                 ['label' => 'Agregar Categoria', 'url' => ['/categorias/agregar']],
+                 ['label' => 'Ver Categorias', 'url' => ['/categorias/index']],
                  ['label' => 'Buscar Categoria', 'url' => '#'],
                ],
 

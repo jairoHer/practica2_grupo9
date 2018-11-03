@@ -23,6 +23,17 @@ class ProductossController extends \yii\web\Controller
           'Productos_disponibles'=>$Productos_disponibles,
         ]);
     }
+
+    public function actionTop()
+    {
+      $Productos_disponibles = OperacionesProducto::get_top();
+
+      return $this->render('top',[
+        'Productos_disponibles'=>$Productos_disponibles,
+      ]);
+    }
+
+
     public function actionComprarProducto($codigo_producto){
       $producto_row = Producto::find()->where('codigo = :codigo', [':codigo' => $codigo_producto])->one();
       if(OperacionesProducto::comprar_producto($codigo_producto)){
